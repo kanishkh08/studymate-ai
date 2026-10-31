@@ -1,0 +1,19 @@
+Operating Systems: Processes and Threads
+
+An operating system (OS) is system software that manages computer hardware and provides services for application programs. The main goals of an OS are convenience for the user, efficient use of hardware, and the ability to evolve with new hardware and software.
+
+A process is a program in execution. Each process has its own address space, which contains the program code (text section), global data, the heap for dynamic memory, and the stack for function calls and local variables. The OS keeps information about each process in a Process Control Block (PCB). The PCB stores the process state, program counter, CPU registers, scheduling information, memory-management information and I/O status.
+
+A process moves between five states: new, ready, running, waiting (blocked) and terminated. A process in the ready state is waiting for the CPU. When the scheduler picks it, it moves to running. If it needs I/O, it moves to waiting, and returns to ready when the I/O finishes.
+
+A thread is the smallest unit of CPU execution inside a process. Threads of the same process share the code section, the data section and open files, but each thread has its own program counter, registers and stack. Because of this sharing, creating a thread and switching between threads is faster than creating or switching processes. Multithreading allows a web server to handle many requests at the same time.
+
+A context switch happens when the CPU stops running one process and starts another. The OS saves the state of the old process in its PCB and loads the saved state of the new process. Context switching is pure overhead because no useful work is done during the switch.
+
+CPU scheduling decides which process in the ready queue gets the CPU next.
+- First Come First Served (FCFS) runs processes in arrival order. It is simple but can cause the convoy effect, where short processes wait behind a long one.
+- Shortest Job First (SJF) picks the process with the smallest next CPU burst. It gives the minimum average waiting time but can starve long processes.
+- Round Robin (RR) gives each process a fixed time quantum, usually 10 to 100 milliseconds, and then moves it to the back of the queue. It is fair and suits time-sharing systems. If the quantum is too large RR behaves like FCFS, and if it is too small the context-switch overhead becomes high.
+- Priority scheduling picks the process with the highest priority. Starvation can be solved with aging, which slowly increases the priority of waiting processes.
+
+A deadlock occurs when a set of processes are blocked forever because each holds a resource that another process in the set needs. Four conditions must hold together: mutual exclusion, hold and wait, no preemption, and circular wait. Breaking any one of these conditions prevents deadlock.

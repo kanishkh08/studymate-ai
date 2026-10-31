@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Brew Haven — Where Every Sip Tells a Story</title>
+  <meta name="description" content="Brew Haven is a cozy café offering handcrafted coffees, artisan pastries, and a warm welcoming atmosphere." />
+
+  <!-- Google Fonts: Playfair Display (headings) + DM Sans (body) -->
+  <!-- Playfair gives that warm, editorial cafe feel; DM Sans is clean and readable -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- Icons: using emoji + Unicode where possible, otherwise SVG inline -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ===================== NAVBAR ===================== -->
+  <nav id="navbar">
+    <div class="container nav-inner">
+
+      <!-- Logo -->
+      <a href="#home" class="nav-logo">Brew<span>Haven</span></a>
+
+      <!-- Desktop links -->
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+
+      <!-- Hamburger (mobile only — CSS hides on desktop) -->
+      <div class="hamburger" aria-label="Toggle menu" role="button" tabindex="0">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+
+    <!-- Mobile slide-down menu -->
+    <div class="mobile-menu">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#menu">Menu</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+
+
+  <!-- ===================== HERO ===================== -->
+  <section id="home">
+    <div id="hero">
+      <div class="hero-content">
+        <span class="hero-badge">☕ Est. 2019 · Handcrafted With Love</span>
+
+        <h1 class="hero-title">
+          Your Favourite<br>
+          Corner of the <em>World</em>
+        </h1>
+
+        <p class="hero-tagline">
+          Fresh beans. Warm vibes. A cup that feels like home.<br>
+          Come in and stay a while.
+        </p>
+
+        <div class="hero-cta">
+          <a href="#menu" class="btn btn-hero-primary">Explore Menu</a>
+          <a href="#about" class="btn btn-hero-outline">Our Story</a>
+        </div>
+      </div>
+
+      <!-- subtle scroll prompt -->
+      <div class="hero-scroll-hint">Scroll</div>
+    </div>
+  </section>
+
+
+  <!-- ===================== ABOUT ===================== -->
+  <section id="about">
+    <div class="container">
+      <div class="about-grid">
+
+        <!-- Left: image with hover zoom -->
+        <div class="about-img-wrapper reveal">
+          <img
+            src="https://images.unsplash.com/photo-1559925393-8be0ec4767c8?w=800&auto=format&fit=crop"
+            alt="Inside Brew Haven café — warm wooden interior with natural light"
+            loading="lazy"
+          />
+        </div>
+
+        <!-- Right: text content, staggered reveal -->
+        <div class="about-text">
+          <p class="section-subtitle reveal" data-delay="1">A little bit about us</p>
+          <h2 class="section-title reveal" data-delay="1">More Than Just<br>a Coffee Shop</h2>
+
+          <p class="reveal" data-delay="2">
+            Brew Haven was born from a simple idea — that a great cup of coffee should feel like
+            a warm hug. Tucked away from the city noise, we've been crafting single-origin brews
+            and homemade pastries since 2019.
+          </p>
+          <p class="reveal" data-delay="2">
+            Every detail here is intentional: the soft playlist, the mismatched mugs, the
+            sunlight through linen curtains. We want you to slow down, stay a bit longer, and
+            leave feeling genuinely good.
+          </p>
+
+          <div class="about-stats reveal" data-delay="3">
+            <div class="stat-item">
+              <div class="number">12+</div>
+              <div class="label">Brew Varieties</div>
+            </div>
+            <div class="stat-item">
+              <div class="number">4.9★</div>
+              <div class="label">Avg. Rating</div>
+            </div>
+            <div class="stat-item">
+              <div class="number">8k+</div>
+              <div class="label">Happy Guests</div>
+            </div>
+          </div>
+
+          <a href="#menu" class="btn btn-primary reveal" data-delay="3" style="margin-top:2rem">
+            See Our Menu
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ===================== MENU ===================== -->
+  <section id="menu">
+    <div class="container">
+      <p class="section-subtitle reveal">Made fresh, made with care</p>
+      <h2 class="section-title reveal">What We're Brewing</h2>
+
+      <!-- Filter buttons -->
+      <div class="menu-filters reveal">
+        <button class="filter-btn active" data-filter="all">All Items</button>
+        <button class="filter-btn" data-filter="coffee">Coffee</button>
+        <button class="filter-btn" data-filter="snacks">Snacks</button>
+        <button class="filter-btn" data-filter="cold">Cold Drinks</button>
+      </div>
+
+      <!-- Menu cards grid -->
+      <div class="menu-grid">
+
+        <!-- Card 1 -->
+        <div class="menu-card reveal" data-category="coffee" data-delay="1">
+          <div class="menu-card-img-wrapper">
+            <img
+              class="menu-card-img"
+              src="https://images.unsplash.com/photo-1510591509098-f4fdc6d0ff04?w=500&auto=format&fit=crop"
+              alt="Flat White coffee"
+              loading="lazy"
+            />
+          </div>
+          <div class="menu-card-body">
+            <div class="menu-card-tag">Coffee</div>
+            <h3 class="menu-card-title">Signature Flat White</h3>
+            <p class="menu-card-desc">Velvety microfoam over a double ristretto. Smooth, rich, and properly strong.</p>
+            <div class="menu-card-footer">
+              <span class="menu-card-price">₹220</span>
+              <span style="font-size:0.78rem;color:var(--text-muted)">Best Seller ★</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="menu-card reveal" data-category="coffee" data-delay="2">
+          <div class="menu-card-img-wrapper">
+            <img
+              class="menu-card-img"
+              src="https://images.unsplash.com/photo-1572286258217-215cf8e13a77?w=500&auto=format&fit=crop"
+              alt="Pour over coffee"
+              loading="lazy"
+            />
+          </div>
+          <div class="menu-card-body">
+            <div class="menu-card-tag">Coffee</div>
+            <h3 class="menu-card-title">Pour Over Single Origin</h3>
+            <p class="menu-card-desc">A slow-drip ritual. Ethiopian Yirgacheffe — floral notes with a citrus finish.</p>
+            <div class="menu-card-footer">
+              <span class="menu-card-price">₹280</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="menu-card reveal" data-category="snacks" data-delay="1">
+          <div class="menu-card-img-wrapper">
+            <img
+              class="menu-card-img"
+              src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?w=500&auto=format&fit=crop"
+              alt="Croissant pastry"
+              loading="lazy"
+            />
+          </div>
+          <div class="menu-card-body">
+            <div class="menu-card-tag">Snacks</div>
+            <h3 class="menu-card-title">Butter Croissant</h3>
+            <p class="menu-card-desc">Flaky layers, baked fresh every morning. Best enjoyed warm with a little jam.</p>
+            <div class="menu-card-footer">
+              <span class="menu-card-price">₹145</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="menu-card reveal" data-category="cold" data-delay="2">
+          <div class="menu-card-img-wrapper">
+            <img
+              class="menu-card-img"
+              src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=500&auto=format&fit=crop"
+              alt="Cold brew coffee"
+              loading="lazy"
+            />
+          </div>
+          <div class="menu-card-body">
+            <div class="menu-card-tag">Cold Drinks</div>
+            <h3 class="menu-card-title">Overnight Cold Brew</h3>
+            <p class="menu-card-desc">12-hour steeped, bold and smooth. Served over ice with oat milk or black.</p>
+            <div class="menu-card-footer">
+              <span class="menu-card-price">₹260</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="menu-card reveal" data-category="snacks" data-delay="3">
+          <div class="menu-card-img-wrapper">
+            <img
+              class="menu-card-img"
+              src="https://images.unsplash.com/photo-1620887165604-1842f7e2be07?w=500&auto=format&fit=crop"
+              alt="Avocado toast"
+              loading="lazy"
+            />
+          </div>
+          <div class="menu-card-body">
+            <div class="menu-card-tag">Snacks</div>
+            <h3 class="menu-card-title">Avo Toast &amp; Egg</h3>
+            <p class="menu-card-desc">Sourdough, smashed avocado, poached egg, chili flakes. A proper brunch pick.</p>
+            <div class="menu-card-footer">
+              <span class="menu-card-price">₹320</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="menu-card reveal" data-category="coffee" data-delay="3">
+          <div class="menu-card-img-wrapper">
+            <img
+              class="menu-card-img"
+              src="https://images.unsplash.com/photo-1534778101976-62847782c213?w=500&auto=format&fit=crop"
+              alt="Dalgona coffee"
+              loading="lazy"
+            />
+          </div>
+          <div class="menu-card-body">
+            <div class="menu-card-tag">Coffee</div>
+            <h3 class="menu-card-title">Dalgona Whipped Coffee</h3>
+            <p class="menu-card-desc">Whipped instant coffee over cold or hot milk. Creamy, dreamy, Insta-worthy.</p>
+            <div class="menu-card-footer">
+              <span class="menu-card-price">₹240</span>
+              <span style="font-size:0.78rem;color:var(--text-muted)">Fan Fav 💛</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 7 -->
+        <div class="menu-card reveal" data-category="cold" data-delay="2">
+          <div class="menu-card-img-wrapper">
+            <img
+              class="menu-card-img"
+              src="https://images.unsplash.com/photo-1553361371-9b22f78e8b1d?w=500&auto=format&fit=crop"
+              alt="Matcha latte"
+              loading="lazy"
+            />
+          </div>
+          <div class="menu-card-body">
+            <div class="menu-card-tag">Cold Drinks</div>
+            <h3 class="menu-card-title">Iced Matcha Latte</h3>
+            <p class="menu-card-desc">Ceremonial-grade matcha whisked with oat milk. Earthy, creamy, and beautiful.</p>
+            <div class="menu-card-footer">
+              <span class="menu-card-price">₹250</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 8 -->
+        <div class="menu-card reveal" data-category="snacks" data-delay="2">
+          <div class="menu-card-img-wrapper">
+            <img
+              class="menu-card-img"
+              src="https://images.unsplash.com/photo-1586985289688-ca3cf47d3e6e?w=500&auto=format&fit=crop"
+              alt="Blueberry muffin"
+              loading="lazy"
+            />
+          </div>
+          <div class="menu-card-body">
+            <div class="menu-card-tag">Snacks</div>
+            <h3 class="menu-card-title">Blueberry Oat Muffin</h3>
+            <p class="menu-card-desc">Packed with wild blueberries and rolled oats. Wholesome and perfect with tea.</p>
+            <div class="menu-card-footer">
+              <span class="menu-card-price">₹130</span>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- end .menu-grid -->
+    </div>
+  </section>
+
+
+  <!-- ===================== SPECIAL OFFER ===================== -->
+  <section id="offer">
+    <div class="container">
+      <div class="offer-inner reveal">
+        <span class="offer-label">🎉 Limited Time Offer</span>
+
+        <h2 class="offer-title">
+          Buy Any Brew,<br>Get a <strong>Free Pastry</strong>
+        </h2>
+
+        <p class="offer-desc">
+          This week only — grab any hot or cold coffee and we'll throw in a freshly baked
+          pastry on the house. Because you deserve it.
+        </p>
+
+        <!-- Countdown timer — JS fills these spans -->
+        <div class="offer-timer">
+          <div class="timer-block">
+            <div class="time-num" id="timer-days">07</div>
+            <div class="time-label">Days</div>
+          </div>
+          <div class="timer-block">
+            <div class="time-num" id="timer-hours">00</div>
+            <div class="time-label">Hours</div>
+          </div>
+          <div class="timer-block">
+            <div class="time-num" id="timer-minutes">00</div>
+            <div class="time-label">Mins</div>
+          </div>
+          <div class="timer-block">
+            <div class="time-num" id="timer-seconds">00</div>
+            <div class="time-label">Secs</div>
+          </div>
+        </div>
+
+        <a href="#menu" class="btn btn-offer">Claim Offer Now</a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ===================== REVIEWS ===================== -->
+  <section id="reviews">
+    <div class="container">
+      <p class="section-subtitle reveal">Don't take our word for it</p>
+      <h2 class="section-title reveal">What Our Guests Say</h2>
+
+      <!-- Slider wrapper -->
+      <div class="reviews-slider-wrapper reveal">
+        <div class="reviews-track">
+
+          <!-- Review 1 -->
+          <div class="review-card">
+            <div class="review-card-inner">
+              <div class="review-stars">★★★★★</div>
+              <p class="review-text">
+                "The flat white here is honestly better than any I've had in Bangalore. The
+                ambiance is ridiculously cozy — I've spent three entire afternoons here
+                without even noticing the time. My favourite corner of the city."
+              </p>
+              <div class="reviewer">
+                <img
+                  src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&auto=format&fit=crop&q=80"
+                  alt="Priya S."
+                />
+                <div>
+                  <div class="reviewer-name">Priya Sharma</div>
+                  <div class="reviewer-role">Regular customer · UX Designer</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Review 2 -->
+          <div class="review-card">
+            <div class="review-card-inner">
+              <div class="review-stars">★★★★★</div>
+              <p class="review-text">
+                "I came for a quick coffee and ended up staying two hours to write. The
+                pour-over is phenomenal and the staff actually know their coffee. This place
+                gets everything right — even the playlist is perfect."
+              </p>
+              <div class="reviewer">
+                <img
+                  src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&auto=format&fit=crop&q=80"
+                  alt="Arjun M."
+                />
+                <div>
+                  <div class="reviewer-name">Arjun Mehta</div>
+                  <div class="reviewer-role">Freelance Writer</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Review 3 -->
+          <div class="review-card">
+            <div class="review-card-inner">
+              <div class="review-stars">★★★★★</div>
+              <p class="review-text">
+                "The iced matcha latte is my weekly ritual now. The croissants are dangerously
+                good. If you're looking for a place that genuinely cares about quality —
+                both the coffee and the experience — Brew Haven is it."
+              </p>
+              <div class="reviewer">
+                <img
+                  src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&auto=format&fit=crop&q=80"
+                  alt="Neha K."
+                />
+                <div>
+                  <div class="reviewer-name">Neha Kapoor</div>
+                  <div class="reviewer-role">Food Blogger · @nehaeats</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div><!-- end .reviews-track -->
+      </div><!-- end .reviews-slider-wrapper -->
+
+      <!-- Slider controls -->
+      <div class="slider-controls">
+        <button class="slider-btn" id="prev-review" aria-label="Previous review">&#8592;</button>
+        <div class="slider-dots">
+          <div class="dot active" data-index="0"></div>
+          <div class="dot" data-index="1"></div>
+          <div class="dot" data-index="2"></div>
+        </div>
+        <button class="slider-btn" id="next-review" aria-label="Next review">&#8594;</button>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ===================== CONTACT ===================== -->
+  <section id="contact">
+    <div class="container">
+      <p class="section-subtitle reveal">We'd love to hear from you</p>
+      <h2 class="section-title reveal">Get in Touch</h2>
+
+      <div class="contact-grid">
+
+        <!-- Left: info -->
+        <div class="contact-info reveal">
+          <h3>Come Say Hello</h3>
+          <p>
+            Whether it's a question about our menu, a catering enquiry, or you just want
+            to share how much you loved your cup — drop us a message.
+          </p>
+
+          <div class="contact-details">
+            <div class="contact-detail-item">
+              <div class="icon">📍</div>
+              <div class="detail-text">
+                <strong>Address</strong>
+                <span>42 Hazel Lane, Koramangala, Bangalore — 560034</span>
+              </div>
+            </div>
+            <div class="contact-detail-item">
+              <div class="icon">🕐</div>
+              <div class="detail-text">
+                <strong>Hours</strong>
+                <span>Mon–Fri: 7 AM – 9 PM &nbsp;|&nbsp; Sat–Sun: 8 AM – 10 PM</span>
+              </div>
+            </div>
+            <div class="contact-detail-item">
+              <div class="icon">📞</div>
+              <div class="detail-text">
+                <strong>Phone</strong>
+                <span>+91 98765 43210</span>
+              </div>
+            </div>
+            <div class="contact-detail-item">
+              <div class="icon">✉️</div>
+              <div class="detail-text">
+                <strong>Email</strong>
+                <span>hello@brewhaven.in</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: form -->
+        <div class="contact-form-wrapper reveal" data-delay="2">
+          <form class="contact-form" id="contact-form" novalidate>
+            <div class="form-group">
+              <label for="f-name">Your Name</label>
+              <input type="text" id="f-name" placeholder="e.g. Priya Sharma" />
+              <span class="form-error"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="f-email">Email Address</label>
+              <input type="email" id="f-email" placeholder="you@example.com" />
+              <span class="form-error"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="f-message">Message</label>
+              <textarea id="f-message" placeholder="Tell us what's on your mind..."></textarea>
+              <span class="form-error"></span>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;display:flex">
+              Send Message ☕
+            </button>
+          </form>
+
+          <!-- Shows after successful submission -->
+          <div class="form-success" id="form-success">
+            ✅ Thanks for reaching out! We'll get back to you within 24 hours.
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer id="footer">
+    <div class="container">
+      <div class="footer-grid">
+
+        <!-- Brand col -->
+        <div class="footer-brand">
+          <div class="logo-text">Brew<span>Haven</span></div>
+          <p>
+            A neighbourhood café that believes in slow mornings, honest coffee,
+            and the kind of quiet that lets you think.
+          </p>
+          <!-- Social icons using simple unicode/emoji since no icon lib loaded -->
+          <div class="social-links">
+            <a href="#" class="social-link" aria-label="Instagram" title="Instagram">
+              <!-- simple SVG instagram icon -->
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+              </svg>
+            </a>
+            <a href="#" class="social-link" aria-label="Twitter / X" title="Twitter">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+              </svg>
+            </a>
+            <a href="#" class="social-link" aria-label="Facebook" title="Facebook">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Quick links -->
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">Our Story</a></li>
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="#offer">Offers</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Hours / info -->
+        <div class="footer-col">
+          <h4>Visit Us</h4>
+          <ul>
+            <li><a href="#">Mon–Fri: 7 AM – 9 PM</a></li>
+            <li><a href="#">Sat–Sun: 8 AM – 10 PM</a></li>
+            <li><a href="#">Koramangala, Bangalore</a></li>
+            <li><a href="#">+91 98765 43210</a></li>
+            <li><a href="#">hello@brewhaven.in</a></li>
+          </ul>
+        </div>
+
+      </div><!-- end .footer-grid -->
+
+      <!-- Bottom bar -->
+      <div class="footer-bottom">
+        <span>© 2024 Brew Haven. Made with ☕ and a lot of love.</span>
+        <span>Built as a front-end internship project.</span>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- JS loaded at the bottom so HTML is already parsed when it runs -->
+  <script src="js/main.js"></script>
+
+</body>
+</html>

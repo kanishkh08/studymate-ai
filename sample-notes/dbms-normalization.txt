@@ -1,0 +1,17 @@
+DBMS: Normalization
+
+Normalization is the process of organizing data in a relational database to reduce redundancy and avoid update, insertion and deletion anomalies. It works by splitting large tables into smaller, related tables and defining relationships between them using keys.
+
+Why normalization is needed: if a table stores student details and course details together, the same course name is repeated for every student who takes it. Changing the course name means updating many rows (update anomaly). A new course cannot be added until at least one student enrols (insertion anomaly). Deleting the last student of a course also deletes the course information (deletion anomaly).
+
+Functional dependency: attribute B is functionally dependent on attribute A (written A -> B) if each value of A determines exactly one value of B. For example, RollNo -> StudentName. A candidate key is a minimal set of attributes that can determine all other attributes of the table. The primary key is the candidate key chosen to identify rows.
+
+First Normal Form (1NF): every column holds atomic (indivisible) values, and there are no repeating groups. A column that stores a list such as "Maths, Physics" violates 1NF and must be split into separate rows.
+
+Second Normal Form (2NF): the table is in 1NF and there is no partial dependency. A non-key attribute must depend on the whole primary key, not just a part of a composite key. 2NF matters only when the primary key is composite.
+
+Third Normal Form (3NF): the table is in 2NF and there is no transitive dependency. A non-key attribute must not depend on another non-key attribute. For example, if StudentID -> DepartmentID and DepartmentID -> DepartmentName, then DepartmentName depends transitively on StudentID, so department details should move to their own table.
+
+Boyce-Codd Normal Form (BCNF): a stricter version of 3NF. For every functional dependency A -> B, A must be a superkey. Every table in BCNF is also in 3NF, but not every 3NF table is in BCNF.
+
+Denormalization is the deliberate addition of redundancy to speed up read-heavy queries, for example in reporting systems. It trades storage space and update complexity for faster joins.
